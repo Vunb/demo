@@ -47,10 +47,3 @@ $ cd [my-app-name]
 $ npm install
 ```
 
-## License
-
-[The MIT License](http://opensource.org/licenses/MIT)
-
-All data provided by the great service and API of [OpenWeatherMap](http://openweathermap.org/).
-
-Copyright (c) 2013 Matthias Lienau &lt;matthias@mlienau.de&gt;
