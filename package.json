@@ -1,0 +1,19 @@
+{
+  "name": "vunb",
+  "description": "Repository for demo",
+  "version": "0.1.0",
+  "author": {
+    "name": "Nhu Bao Vu",
+    "email": "nhubaovu@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vunb/vunb.git"
+  },
+  "scripts": {
+    "start": "node scripts/static-server.js"
+  },
+  "devDependencies": {},
+  "dependencies": {
+  }
+}
