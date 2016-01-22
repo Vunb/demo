@@ -1,0 +1,29 @@
+# Example of the baseline configuration in YAML
+
+RedisCache:
+  host: "127.0.0.1"
+  port: 6379
+  ttl: 30000 # in seconds
+
+LicenseMgrDb:
+  host: "https://licman-dev.firebaseio.com/"
+  port: 6379
+  ttl: 30000 # in seconds
+
+LicenseMgrKeyGen:
+  b: 2048
+  e: 65537
+  md5: "md5"
+  sha1: "sha1"
+  sha256: "sha256"
+  utf8: "utf8"
+  licType: "0"
+  encoding: "base64"
+  sourceEncoding: "utf8"
+  fileName: "pem4ipost.json"
+  dateFormat: "yyyy-mm-dd HH:MM:ss"
+  passwd: "lmipost"
+
+ErrorCode:
+  success: 0
+  systemerror: -1
