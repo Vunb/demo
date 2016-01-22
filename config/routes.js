@@ -32,9 +32,13 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  //'/': {
+  //  view: 'homepage'
+  //}
+
+  '/forward': 'StreamForwardController.forward',
+
+  '/openweathermap/:path/:subPath': 'StreamForwardController.openWeatherMap'
 
   /***************************************************************************
   *                                                                          *
