@@ -38,6 +38,8 @@ module.exports.routes = {
 
   '/forward': 'StreamForwardController.forward',
 
+  '/api/demo': 'AJSDemoController.angularJSApiDemo',
+
   '/openweathermap/:path/:subPath': 'StreamForwardController.openWeatherMap'
 
   /***************************************************************************
