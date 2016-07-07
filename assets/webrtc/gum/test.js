@@ -4,6 +4,7 @@ var vgaButton = document.querySelector('button#vga');
 var qvgaButton = document.querySelector('button#qvga');
 var hdButton = document.querySelector('button#hd');
 var svButton = document.querySelector('button#sv');
+var customBtn = document.querySelector('button#custom');
 var dimensions = document.querySelector('p#dimensions');
 var video = document.querySelector('video');
 
@@ -80,6 +81,15 @@ hdButton.onclick = function() {
 svButton.onclick = function() {
     getMedia(svConstraints);
 };
+
+customBtn.onclick = function() {
+    var input = document.querySelector("textarea#textValue");
+    var txtValue = input.value;
+    if(txtValue) {
+        var constraints = JSON.parse(txtValue);
+        getMedia(constraints);
+    }
+}
 
 function getMedia(constraints) {
     if (window.stream && window.stream.stop) {

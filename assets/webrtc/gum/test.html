@@ -67,6 +67,22 @@
             <button id="vga">VGA</button>
             <button id="hd">HD</button>
             <button id="sv">S-Video</button>
+            <button id="custom">Custom</button>
+        </div>
+        <div id="constraints">
+            <textarea id="textValue" rows="5" cols="60" placeholder="Enter custom constraints" >
+{
+    "audio": false,
+    "video": {
+        "mandatory": {
+            "maxWidth": 640,
+            "maxHeight": 480,
+            "maxAspectRatio": 1.333,
+            "maxFrameRate": 30
+        }
+    }
+}
+</textarea>
         </div>
 
         <p id="dimensions"></p>
