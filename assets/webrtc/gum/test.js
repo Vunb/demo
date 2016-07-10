@@ -85,11 +85,16 @@ svButton.onclick = function() {
 customBtn.onclick = function() {
     var input = document.querySelector("textarea#textValue");
     var txtValue = input.value;
-    if(txtValue) {
+    if (txtValue) {
         var constraints = JSON.parse(txtValue);
         getMedia(constraints);
     }
 }
+
+navigator.getMedia = (navigator.getUserMedia ||
+    navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia ||
+    navigator.msGetUserMedia);
 
 function getMedia(constraints) {
     if (window.stream && window.stream.stop) {
@@ -112,5 +117,20 @@ function getMedia(constraints) {
             });
         }
     }
-    navigator.getUserMedia(constraints, successCallback, errorCallback);
+    navigator.getMedia(constraints, successCallback, errorCallback);
 }
+
+var video = document.querySelector('video');
+var canvas = document.querySelector('canvas');
+var ctx = canvas.getContext('2d');
+
+function snapshot() {
+    if (window.stream) {
+        ctx.drawImage(video, 0, 0);
+        // "image/webp" works in Chrome.
+        // Other browsers will fall back to image/png.
+        document.querySelector('img').src = canvas.toDataURL('image/png');
+    }
+}
+
+video.addEventListener('click', snapshot, false);
