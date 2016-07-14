@@ -44,7 +44,8 @@ app.service('svGetMedia', [
                     "mandatory": {
                         "maxWidth": 640,
                         "maxHeight": 480,
-                        "maxAspectRatio": 1.333,
+                        "minAspectRatio": 1.333,
+                        "maxAspectRatio": 1.334,
                         "maxFrameRate": 30
                     }
                 }

@@ -61,12 +61,24 @@
         <p>This example uses <a href="http://tools.ietf.org/html/draft-alvestrand-constraints-resolution-00#page-4" title="IETF constraints draft proposal">constraints</a>.</p>
 
         <p>Click a button to call <code>getUserMedia()</code> with appropriate resolution.</p>
+        <blockquote>
+            GetUserMedia constraints are matched with a fixed list of resolutions independent on what the camera actually support.
+            <br /> The list is fixed and used on all platforms.
+            <ul>
+                <li>1280x720</li>
+                <li>960x720</li>
+                <li>640x360</li>
+                <li>640x480</li>
+                <li>320x240</li>
+                <li>320x180</li>
+            </ul>
+        </blockquote>
 
         <div id="buttons">
-            <button id="qvga">QVGA</button>
-            <button id="vga">VGA</button>
-            <button id="hd">HD</button>
-            <button id="sv">S-Video</button>
+            <button id="qvga">QVGA (320x180)</button>
+            <button id="vga">VGA (640x360)</button>
+            <button id="hd">HD (1280x720)</button>
+            <button id="sv">S-Video (768x576)</button>
             <button id="custom">Custom</button>
         </div>
         <div id="constraints">
@@ -77,12 +89,13 @@
         "mandatory": {
             "maxWidth": 640,
             "maxHeight": 480,
-            "maxAspectRatio": 1.333,
+            "minAspectRatio": 1.333,
+            "maxAspectRatio": 1.334,
             "maxFrameRate": 30
         }
     }
 }
-</textarea>
+            </textarea>
         </div>
 
         <p id="dimensions"></p>
